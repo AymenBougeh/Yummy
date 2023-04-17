@@ -1,0 +1,28 @@
+<nav>
+  <div class="logo">
+    <a routerLink="/" class="logo">
+      <p [ngClass]="{'text-yellow-300': isActive('/'), 'text-gray-500': !isActive('/')}" class="logo">FAST && YUMMY</p>
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li>
+      <a routerLink="/" [ngClass]="{'active': isActive('/')}">Home</a>
+    </li>
+    <li>
+      <a routerLink="/order" [ngClass]="{'active': isActive('/order')}">Order Online</a>
+    </li>
+    <li>
+      <a routerLink="/contact" [ngClass]="{'active': isActive('/contact')}">Contact Us</a>
+    </li>
+    <li>
+      <div class="mr-20">
+        <button type="button" routerLink="/shop">
+          <i class="fas fa-shopping-cart"  ></i>
+        </button>
+      </div>
+    </li>
+  </ul>
+  <div class="login">
+    <a routerLink="/login" class="newa">LOGIN</a>
+  </div>
+</nav>

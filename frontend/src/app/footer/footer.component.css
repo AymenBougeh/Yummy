@@ -1,0 +1,31 @@
+
+  
+  footer a:hover {
+    color: #F59E0B; /* Change link color on hover */
+  }
+
+
+  .footer{
+    height: 53px;
+    background: antiquewhite;
+ }   
+.iconBox{
+    display: flex;
+    margin-right: 15px;
+}
+
+a{
+    width: 50px;
+    height: 20px;
+}
+
+.maindas{
+    display: flex;
+    padding: 14px;
+}
+
+.text{
+    width: 85%;
+    margin-left: 15px;
+}
+
