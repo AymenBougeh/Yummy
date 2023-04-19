@@ -1,1 +1,11 @@
-<p>order works!</p>
+<div class="food-card-container">
+    <div class="food-card" *ngFor="let food of foods">
+      <img class="food-img" [src]="food.img" alt="{{ food.name }}" />
+      <div class="food-details">
+        <h2 class="food-name">{{ food.name }}</h2>
+        <div class="food-rating"> {{ getRatingStars(food.rate) }}</div>
+        <p class="food-price">{{ food.price | currency }}<button class="food-add-to-cart" (click)="onFoodAdded(food)">Add</button></p>
+      </div>
+    </div>
+  </div>
+  

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -11,11 +10,12 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ShopComponent } from './shop/shop.component';
-import { MenuComponent } from './menu/menu.component';
 import { AdminComponent } from './admin/admin.component';
 import { ClientComponent } from './client/client.component';
 import { FooterComponent } from './footer/footer.component';
 import { DisplayFoodComponent } from './display-food/display-food.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 const appRoutes: Routes = [
@@ -23,7 +23,8 @@ const appRoutes: Routes = [
   { path: 'order', component: OrderComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'shop', component: ShopComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+ 
 ];
 
 @NgModule({
@@ -32,12 +33,10 @@ const appRoutes: Routes = [
     HomeComponent,
     NavbarComponent,
     OrderComponent,
-    ShopComponent,
     ContactComponent,
     LoginComponent,
     SignupComponent,
     ShopComponent,
-    MenuComponent,
     AdminComponent,
     ClientComponent,
     FooterComponent,
@@ -46,7 +45,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

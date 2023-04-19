@@ -1,1 +1,4 @@
-<p>shop works!</p>
+<h2>Cart</h2>
+<ul>
+  <li *ngFor="let item of cart">{{ item.name }} - {{ item.price | currency }}</li>
+</ul>
